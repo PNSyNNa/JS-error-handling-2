@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> JS error handling</h1>
+
+<script>
+
+try{
+    const dividend = Number(window.prompt("enter first number"));
+    const divisor = Number(window.prompt("enter second number"));
+
+if(divisor == 0){ 
+    throw new Error("You cant devide by zero!");
+}
+if(isNaN (dividend) || isNaN(divisor)){
+    throw new Error("Values must be a number!");
+}
+
+const result = dividend / divisor;
+document.write(result);
+}
+catch(error){
+    console.error(error);
+}
+
+
+
+</script>
+
+
+</body>
+</html>
